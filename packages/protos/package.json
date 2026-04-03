@@ -1,0 +1,10 @@
+{
+  "name": "@wc-app/protos",
+  "version": "1.0.0",
+  "description": "Shared gRPC proto definitions",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "echo 'No build format for raw protos yet'"
+  }
+}

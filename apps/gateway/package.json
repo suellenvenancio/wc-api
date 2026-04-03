@@ -1,0 +1,16 @@
+{
+  "name": "@wc-app/gateway",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@fastify/http-proxy": "^11.4.3",
+    "@grpc/grpc-js": "^1.10.4",
+    "@grpc/proto-loader": "^0.7.10",
+    "dotenv": "^16.3.1",
+    "fastify": "^5.7.4",
+    "@wc-app/protos": "*",
+    "@wc-app/database": "*"
+  }
+}

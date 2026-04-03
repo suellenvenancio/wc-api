@@ -1,0 +1,223 @@
+generator client {
+  provider = "prisma-client"
+  output   = "./generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String           @id @default(uuid())
+  email        String           @unique
+  name         String
+  password     String
+  createdAt    DateTime         @default(now())
+
+  savedLineups UserTeamLineup[] 
+  matchLineups MatchLineup[]
+}
+
+model Tournament {
+  id      Int     @id @default(autoincrement())
+  name    String
+  year    Int
+  teams   Team[]
+  matches Match[]
+  groups  Group[]
+}
+
+model Group {
+  id             Int          @id @default(autoincrement())
+  name           String
+  tournamentId   Int
+  tournament     Tournament   @relation(fields: [tournamentId], references: [id])
+
+  teams     Team[]
+  standings GroupStanding[]
+}
+
+model Stadium {
+  id       Int     @id @default(autoincrement())
+  name     String
+  city     String
+  capacity Int
+  matches  Match[]
+}
+
+model Team {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  rankingFifa Int?
+  flag        String?
+
+  tournaments Tournament[]
+
+  groupId Int?
+  group   Group? @relation(fields: [groupId], references: [id])
+
+  coach   Coach?
+  players Player[]
+
+  homeMatches   Match[]          @relation("HomeTeam")
+  awayMatches   Match[]          @relation("AwayTeam")
+  groupStanding GroupStanding?
+  userLineups   UserTeamLineup[]
+  matchLineups  MatchLineup[]
+}
+
+model Coach {
+  id                 Int     @id @default(autoincrement())
+  name               String
+  preferredFormation String?
+  image              String?
+  teamId             Int     @unique
+  team               Team    @relation(fields: [teamId], references: [id])
+}
+
+model Player {
+  id              Int       @id @default(autoincrement())
+  name            String
+  position        String
+  overallRating   Float
+  goalsLastSeason Int       @default(0)
+  image           String?
+  birthDate       DateTime?
+  teamId          Int
+  team            Team      @relation(fields: [teamId], references: [id])
+
+  userLineupPlayers  UserTeamLineupPlayer[]
+  matchLineupPlayers MatchLineupPlayer[]
+}
+
+model Match {
+  id        Int      @id @default(autoincrement())
+  matchDate DateTime
+  homeScore Int?
+  awayScore Int?
+
+  tournamentId Int
+  tournament   Tournament @relation(fields: [tournamentId], references: [id])
+
+  stadiumId Int
+  stadium   Stadium @relation(fields: [stadiumId], references: [id])
+
+  homeTeamId Int
+  homeTeam   Team @relation("HomeTeam", fields: [homeTeamId], references: [id])
+
+  awayTeamId Int
+  awayTeam   Team @relation("AwayTeam", fields: [awayTeamId], references: [id])
+
+  matchLineups MatchLineup[]
+  promptLogs   PromptLog[]
+}
+
+model GroupStanding {
+  id Int @id @default(autoincrement())
+
+  points         Int @default(0)
+  wins           Int @default(0)
+  draws          Int @default(0)
+  goalDifference Int @default(0)
+
+  playedMatches Int @default(0)
+  losses        Int @default(0)
+  goalsFor      Int @default(0)
+  goalsAgainst  Int @default(0)
+
+  groupId Int
+  group   Group @relation(fields: [groupId], references: [id])
+
+  teamId Int  @unique
+  team   Team @relation(fields: [teamId], references: [id])
+
+  @@unique([groupId, teamId])
+}
+
+model UserTeamLineup {
+  id        Int    @id @default(autoincrement())
+  formation String
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  teamId Int
+  team   Team @relation(fields: [teamId], references: [id])
+
+  players    UserTeamLineupPlayer[]
+  promptLogs PromptLog[]
+
+  @@unique([userId, teamId])
+}
+
+model MatchLineup {
+  id        Int    @id @default(autoincrement())
+  formation String
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  matchId Int
+  match   Match @relation(fields: [matchId], references: [id])
+
+  teamId Int
+  team   Team @relation(fields: [teamId], references: [id])
+
+  players    MatchLineupPlayer[]
+  promptLogs PromptLog[]
+
+  @@unique([userId, matchId, teamId])
+}
+
+model UserTeamLineupPlayer {
+  id               Int            @id @default(autoincrement())
+  userTeamLineupId Int
+  lineup           UserTeamLineup @relation(fields: [userTeamLineupId], references: [id])
+
+  playerId Int
+  player   Player @relation(fields: [playerId], references: [id])
+
+  positionIndex Int
+}
+
+model MatchLineupPlayer {
+  id            Int         @id @default(autoincrement())
+  matchLineupId Int
+  matchLineup   MatchLineup @relation(fields: [matchLineupId], references: [id])
+
+  playerId Int
+  player   Player @relation(fields: [playerId], references: [id])
+
+  positionIndex Int
+}
+
+model PromptTemplate {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  template  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  logs PromptLog[]
+}
+
+model PromptLog {
+  id Int @id @default(autoincrement())
+
+  promptId       Int
+  promptTemplate PromptTemplate @relation(fields: [promptId], references: [id])
+
+  sentPrompt String
+  response String
+
+  userLineupId Int?
+  userLineup   UserTeamLineup? @relation(fields: [userLineupId], references: [id])
+
+  matchLineupId Int?
+  matchLineup   MatchLineup? @relation(fields: [matchLineupId], references: [id])
+
+  matchId Int?
+  match   Match? @relation(fields: [matchId], references: [id])
+
+  createdAt DateTime @default(now())
+}

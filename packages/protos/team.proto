@@ -1,0 +1,15 @@
+syntax = "proto3";
+package team;
+service TeamService {
+  rpc FindTeamById (FindTeamByIdRequest) returns (FindTeamByIdResponse) {}
+}
+message FindTeamByIdRequest {
+  string id = 1;
+}
+message FindTeamByIdResponse {
+  string id = 1;
+  string name = 2;
+  string flag = 3;
+  int32 rankingFifa = 4;
+  int32 groupId = 5;
+}

@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Alex Sandro",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/84854/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Casemiro",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/122951/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Danilo",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/124992/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Marquinhos",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/155995/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Fabinho",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/243585/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Alisson Becker",
+    "position": "GK",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/243609/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Ederson Moraes",
+    "position": "GK",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/254491/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Bruno Guimarães",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/866469/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Vinícius Júnior",
+    "position": "FWD",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/868812/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Rodrygo Goes",
+    "position": "FWD",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/910536/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Gabriel Martinelli",
+    "position": "FWD",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/922573/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Vitor Roque",
+    "position": "FWD",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/1150391/image",
+    "team": "Brasil"
+  },
+  {
+    "name": "Craig Gordon",
+    "position": "GK",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/9370/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Kenny McLean",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/75756/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Grant Hanley",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/95791/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Scott Bain",
+    "position": "GK",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/96493/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Angus Gunn",
+    "position": "GK",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/227946/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Lawrence Shankland",
+    "position": "FWD",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/237098/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "John McGinn",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/250223/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Andrew Robertson",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/262911/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Ryan Christie",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/322391/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Scott McKenna",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/358108/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Kieran Tierney",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/366592/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Che Adams",
+    "position": "FWD",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/773409/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Jack Hendry",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/795696/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Scott McTominay",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/879346/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Lewis Ferguson",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/907152/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Billy Gilmour",
+    "position": "MID",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/907668/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Aaron Hickey",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/966869/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Josh Doig",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/989276/image",
+    "team": "Escócia"
+  },
+  {
+    "name": "Max Johnston",
+    "position": "DEF",
+    "overallRating": 6.5,
+    "goalsLastSeason": 0,
+    "image": "https://img.sofascore.com/api/v1/player/1048192/image",
+    "team": "Escócia"
+  }
+]

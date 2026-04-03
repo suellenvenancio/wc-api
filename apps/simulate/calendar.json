@@ -1,0 +1,510 @@
+{
+  "campeonato": "Copa do Mundo FIFA 2026",
+  "paises_sede": ["Estados Unidos", "México", "Canadá"],
+  "grupos": [
+    {
+      "nome": "Grupo A",
+      "times": ["México", "África do Sul", "Coreia do Sul", "Vencedor Playoff Europa D"],
+      "jogos": [
+        {
+          "data": "2026-06-11",
+          "horario": "16:00",
+          "local": "Estádio Azteca, Cidade do México",
+          "confronto": "México x África do Sul"
+        },
+        {
+          "data": "2026-06-11",
+          "horario": "23:00",
+          "local": "Estádio Akron, Guadalajara",
+          "confronto": "Coreia do Sul x Vencedor Playoff Europa D"
+        },
+        {
+          "data": "2026-06-18",
+          "horario": "22:00",
+          "local": "Estádio Akron, Guadalajara",
+          "confronto": "México x Coreia do Sul"
+        },
+        {
+          "data": "2026-06-18",
+          "horario": "13:00",
+          "local": "Mercedes-Benz Stadium, Atlanta",
+          "confronto": "Vencedor Playoff Europa D x África do Sul"
+        },
+        {
+          "data": "2026-06-24",
+          "horario": "22:00",
+          "local": "Estádio Azteca, Cidade do México",
+          "confronto": "Vencedor Playoff Europa D x México"
+        },
+        {
+          "data": "2026-06-24",
+          "horario": "22:00",
+          "local": "Estádio BBVA, Monterrey",
+          "confronto": "África do Sul x Coreia do Sul"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo B",
+      "times": ["Canadá", "Suíça", "Catar", "Vencedor Playoff Europa A"],
+      "jogos": [
+        {
+          "data": "2026-06-12",
+          "horario": "16:00",
+          "local": "BMO Field, Toronto",
+          "confronto": "Canadá x Vencedor Playoff Europa A"
+        },
+        {
+          "data": "2026-06-13",
+          "horario": "16:00",
+          "local": "Levi's Stadium, São Francisco",
+          "confronto": "Catar x Suíça"
+        },
+        {
+          "data": "2026-06-18",
+          "horario": "19:00",
+          "local": "BC Place, Vancouver",
+          "confronto": "Canadá x Catar"
+        },
+        {
+          "data": "2026-06-18",
+          "horario": "16:00",
+          "local": "SoFi Stadium, Los Angeles",
+          "confronto": "Suíça x Vencedor Playoff Europa A"
+        },
+        {
+          "data": "2026-06-24",
+          "horario": "16:00",
+          "local": "BC Place, Vancouver",
+          "confronto": "Suíça x Canadá"
+        },
+        {
+          "data": "2026-06-24",
+          "horario": "16:00",
+          "local": "Lumen Field, Seattle",
+          "confronto": "Vencedor Playoff Europa A x Catar"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo C",
+      "times": ["Brasil", "Marrocos", "Haiti", "Escócia"],
+      "jogos": [
+        {
+          "data": "2026-06-13",
+          "horario": "19:00",
+          "local": "MetLife Stadium, Nova Jersey",
+          "confronto": "Brasil x Marrocos"
+        },
+        {
+          "data": "2026-06-13",
+          "horario": "22:00",
+          "local": "Gillette Stadium, Boston",
+          "confronto": "Haiti x Escócia"
+        },
+        {
+          "data": "2026-06-19",
+          "horario": "22:00",
+          "local": "Lincoln Financial Field, Filadélfia",
+          "confronto": "Brasil x Haiti"
+        },
+        {
+          "data": "2026-06-19",
+          "horario": "19:00",
+          "local": "Gillette Stadium, Boston",
+          "confronto": "Escócia x Marrocos"
+        },
+        {
+          "data": "2026-06-24",
+          "horario": "19:00",
+          "local": "Hard Rock Stadium, Miami",
+          "confronto": "Escócia x Brasil"
+        },
+        {
+          "data": "2026-06-24",
+          "horario": "19:00",
+          "local": "Mercedes-Benz Stadium, Atlanta",
+          "confronto": "Marrocos x Haiti"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo D",
+      "times": ["Estados Unidos", "Paraguai", "Austrália", "Vencedor Playoff Europa C"],
+      "jogos": [
+        {
+          "data": "2026-06-12",
+          "horario": "22:00",
+          "local": "SoFi Stadium, Los Angeles",
+          "confronto": "Estados Unidos x Paraguai"
+        },
+        {
+          "data": "2026-06-14",
+          "horario": "01:00",
+          "local": "BC Place, Vancouver",
+          "confronto": "Austrália x Vencedor Playoff Europa C"
+        },
+        {
+          "data": "2026-06-19",
+          "horario": "16:00",
+          "local": "Lumen Field, Seattle",
+          "confronto": "Estados Unidos x Austrália"
+        },
+        {
+          "data": "2026-06-20",
+          "horario": "01:00",
+          "local": "Levi's Stadium, São Francisco",
+          "confronto": "Vencedor Playoff Europa C x Paraguai"
+        },
+        {
+          "data": "2026-06-25",
+          "horario": "23:00",
+          "local": "SoFi Stadium, Los Angeles",
+          "confronto": "Vencedor Playoff Europa C x Estados Unidos"
+        },
+        {
+          "data": "2026-06-25",
+          "horario": "23:00",
+          "local": "Levi's Stadium, São Francisco",
+          "confronto": "Paraguai x Austrália"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo E",
+      "times": ["Alemanha", "Costa do Marfim", "Equador", "Curaçao"],
+      "jogos": [
+        {
+          "data": "2026-06-14",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Alemanha x Curaçao"
+        },
+        {
+          "data": "2026-06-14",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Costa do Marfim x Equador"
+        },
+        {
+          "data": "2026-06-20",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Alemanha x Costa do Marfim"
+        },
+        {
+          "data": "2026-06-20",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Equador x Curaçao"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Equador x Alemanha"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Curaçao x Costa do Marfim"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo F",
+      "times": ["Holanda", "Japão", "Tunísia", "Vencedor Playoff Europa B"],
+      "jogos": [
+        {
+          "data": "2026-06-14",
+          "horario": "17:00",
+          "local": "AT&T Stadium, Dallas",
+          "confronto": "Holanda x Japão"
+        },
+        {
+          "data": "2026-06-14",
+          "horario": "23:00",
+          "local": "Estádio BBVA, Monterrey",
+          "confronto": "Vencedor Playoff Europa B x Tunísia"
+        },
+        {
+          "data": "2026-06-20",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Holanda x Vencedor Playoff Europa B"
+        },
+        {
+          "data": "2026-06-20",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Tunísia x Japão"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Tunísia x Holanda"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Japão x Vencedor Playoff Europa B"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo G",
+      "times": ["Bélgica", "Egito", "Irã", "Nova Zelândia"],
+      "jogos": [
+        {
+          "data": "2026-06-15",
+          "horario": "16:00",
+          "local": "Lumen Field, Seattle",
+          "confronto": "Bélgica x Egito"
+        },
+        {
+          "data": "2026-06-15",
+          "horario": "22:00",
+          "local": "SoFi Stadium, Los Angeles",
+          "confronto": "Irã x Nova Zelândia"
+        },
+        {
+          "data": "2026-06-21",
+          "horario": "16:00",
+          "local": "SoFi Stadium, Los Angeles",
+          "confronto": "Bélgica x Irã"
+        },
+        {
+          "data": "2026-06-21",
+          "horario": "21:00",
+          "local": "BC Place, Vancouver",
+          "confronto": "Egito x Nova Zelândia"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "23:00",
+          "local": "BC Place, Vancouver",
+          "confronto": "Nova Zelândia x Bélgica"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "23:00",
+          "local": "Lumen Field, Seattle",
+          "confronto": "Egito x Irã"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo H",
+      "times": ["Espanha", "Arábia Saudita", "Uruguai", "Cabo Verde"],
+      "jogos": [
+        {
+          "data": "2026-06-15",
+          "horario": "13:00",
+          "local": "Mercedes-Benz Stadium, Atlanta",
+          "confronto": "Espanha x Cabo Verde"
+        },
+        {
+          "data": "2026-06-15",
+          "horario": "19:00",
+          "local": "Hard Rock Stadium, Miami",
+          "confronto": "Arábia Saudita x Uruguai"
+        },
+        {
+          "data": "2026-06-21",
+          "horario": "12:00",
+          "local": "Mercedes-Benz Stadium, Atlanta",
+          "confronto": "Espanha x Arábia Saudita"
+        },
+        {
+          "data": "2026-06-21",
+          "horario": "18:00",
+          "local": "Hard Rock Stadium, Miami",
+          "confronto": "Uruguai x Cabo Verde"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "20:00",
+          "local": "Estádio Akron, Guadalajara",
+          "confronto": "Uruguai x Espanha"
+        },
+        {
+          "data": "2026-06-26",
+          "horario": "20:00",
+          "local": "NRG Stadium, Houston",
+          "confronto": "Cabo Verde x Arábia Saudita"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo I",
+      "times": ["França", "Senegal", "Noruega", "Vencedor Playoff Intercontinental 2"],
+      "jogos": [
+        {
+          "data": "2026-06-16",
+          "horario": "16:00",
+          "local": "MetLife Stadium, Nova Jersey",
+          "confronto": "França x Senegal"
+        },
+        {
+          "data": "2026-06-16",
+          "horario": "19:00",
+          "local": "Gillette Stadium, Boston",
+          "confronto": "Vencedor Playoff Intercontinental 2 x Noruega"
+        },
+        {
+          "data": "2026-06-22",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "França x Vencedor Playoff Intercontinental 2"
+        },
+        {
+          "data": "2026-06-22",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Noruega x Senegal"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Noruega x França"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Senegal x Vencedor Playoff Intercontinental 2"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo J",
+      "times": ["Argentina", "Áustria", "Argélia", "Jordânia"],
+      "jogos": [
+        {
+          "data": "2026-06-16",
+          "horario": "22:00",
+          "local": "Arrowhead Stadium, Kansas City",
+          "confronto": "Argentina x Argélia"
+        },
+        {
+          "data": "2026-06-17",
+          "horario": "01:00",
+          "local": "Levi's Stadium, São Francisco",
+          "confronto": "Áustria x Jordânia"
+        },
+        {
+          "data": "2026-06-22",
+          "horario": "14:00",
+          "local": "AT&T Stadium, Dallas",
+          "confronto": "Argentina x Áustria"
+        },
+        {
+          "data": "2026-06-22",
+          "horario": "00:00",
+          "local": "Levi's Stadium, São Francisco",
+          "confronto": "Jordânia x Argélia"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "23:00",
+          "local": "AT&T Stadium, Dallas",
+          "confronto": "Jordânia x Argentina"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "23:00",
+          "local": "Arrowhead Stadium, Kansas City",
+          "confronto": "Argélia x Áustria"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo K",
+      "times": ["Portugal", "Colômbia", "Uzbequistão", "Vencedor Playoff Intercontinental 1"],
+      "jogos": [
+        {
+          "data": "2026-06-17",
+          "horario": "14:00",
+          "local": "NRG Stadium, Houston",
+          "confronto": "Portugal x Vencedor Playoff Intercontinental 1"
+        },
+        {
+          "data": "2026-06-17",
+          "horario": "23:00",
+          "local": "Estádio Azteca, Cidade do México",
+          "confronto": "Uzbequistão x Colômbia"
+        },
+        {
+          "data": "2026-06-23",
+          "horario": "14:00",
+          "local": "NRG Stadium, Houston",
+          "confronto": "Portugal x Uzbequistão"
+        },
+        {
+          "data": "2026-06-23",
+          "horario": "23:00",
+          "local": "Estádio Akron, Guadalajara",
+          "confronto": "Colômbia x Vencedor Playoff Intercontinental 1"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Colômbia x Portugal"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "A definir",
+          "local": "A definir",
+          "confronto": "Vencedor Playoff Intercontinental 1 x Uzbequistão"
+        }
+      ]
+    },
+    {
+      "nome": "Grupo L",
+      "times": ["Inglaterra", "Croácia", "Gana", "Panamá"],
+      "jogos": [
+        {
+          "data": "2026-06-17",
+          "horario": "17:00",
+          "local": "AT&T Stadium, Dallas",
+          "confronto": "Inglaterra x Croácia"
+        },
+        {
+          "data": "2026-06-17",
+          "horario": "20:00",
+          "local": "BMO Field, Toronto",
+          "confronto": "Gana x Panamá"
+        },
+        {
+          "data": "2026-06-23",
+          "horario": "17:00",
+          "local": "Gillette Stadium, Boston",
+          "confronto": "Inglaterra x Gana"
+        },
+        {
+          "data": "2026-06-23",
+          "horario": "20:00",
+          "local": "BMO Field, Toronto",
+          "confronto": "Panamá x Croácia"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "18:00",
+          "local": "MetLife Stadium, Nova Jersey",
+          "confronto": "Panamá x Inglaterra"
+        },
+        {
+          "data": "2026-06-27",
+          "horario": "19:00",
+          "local": "Lincoln Financial Field, Filadélfia",
+          "confronto": "Croácia x Gana"
+        }
+      ]
+    }
+  ]
+}
