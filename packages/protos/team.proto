@@ -1,15 +1,40 @@
 syntax = "proto3";
 package team;
+
 service TeamService {
-  rpc FindTeamById (FindTeamByIdRequest) returns (FindTeamByIdResponse) {}
+  rpc FindTeamById (Params) returns (TeamResponse) {}
+  rpc FindPlayerById (Params) returns (PlayerResponse) {}
 }
-message FindTeamByIdRequest {
+
+message Params {
   string id = 1;
 }
-message FindTeamByIdResponse {
+message TeamResponse {
   string id = 1;
   string name = 2;
   string flag = 3;
   int32 rankingFifa = 4;
   int32 groupId = 5;
 }
+
+message FindPlayerByIdRequest {
+  string id = 1;
+}
+message FindPlayerByIdResponse {
+  string id = 1;
+  string name = 2;
+  string position = 3;
+  int32 teamId = 4;
+}
+
+message PlayerResponse {
+  string id = 1;
+  string name = 2;
+  string position = 3;
+  string overallRating = 4;
+  string goalsLastSeason = 5;
+  string image = 6;
+  int32 teamId = 7;
+  string birthDate = 8;
+}
+

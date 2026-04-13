@@ -2,12 +2,12 @@ import type { FastifyReply, FastifyRequest } from "fastify"
 import groupService from "../service/group.service"
 
 export async function createGroup(
-  request: FastifyRequest<{ Body: { name: string; championshipId: number } }>,
+  request: FastifyRequest<{ Body: { name: string; tournamentId: number } }>,
   reply: FastifyReply,
 ) {
   try {
-    const { name, championshipId } = request.body
-    const group = await groupService.createGroup({ name, championshipId })
+    const { name, tournamentId } = request.body
+    const group = await groupService.createGroup({ name, tournamentId })
     return reply.status(201).send(group)
   } catch (error) {
     console.log(error)
@@ -42,13 +42,13 @@ export async function findGroupById(
   }
 }
 
-export async function findGroupByChampionshipId(
-  request: FastifyRequest<{ Params: { championshipId: number } }>,
+export async function findGroupByTournamentId(
+  request: FastifyRequest<{ Params: { tournamentId: number } }>,
   reply: FastifyReply,
 ) {
   try {
-    const { championshipId } = request.params
-    const group = await groupService.findGroupByChampionshipId(championshipId)
+    const { tournamentId } = request.params
+    const group = await groupService.findGroupByTournamentId(tournamentId)
     return reply.status(200).send(group)
   } catch (error) {
     console.log(error)

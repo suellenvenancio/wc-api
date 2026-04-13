@@ -1,5 +1,5 @@
-import teamGrpc from "../grpc/team.grpc"
-import { userGrpc } from "../grpc/user.grpc"
+import teamGrpc from "../grpc/grpc-client/team.grpc"
+import { userGrpc } from "../grpc/grpc-client/user.grpc"
 import lineupRepository from "../repository/lineup.repository"
 import matchRepository from "../repository/match.repository"
 
@@ -17,7 +17,7 @@ async function createOrUpdateLineup({
   players: { playerId: number; positionIndex: number }[]
 }) {
   try {
-    const user = await userGrpc.getUserById(userId)
+    const user = await userGrpc.findUserById(userId)
 
     if (!user) {
       throw new Error("User not found")
@@ -31,6 +31,13 @@ async function createOrUpdateLineup({
     const team = await teamGrpc.findTeamById(teamId)
     if (!team) {
       throw new Error("Team not found")
+    }
+
+    for (const player of players) {
+      const playerFound = await teamGrpc.findPlayerById(player.playerId)
+      if (!playerFound) {
+        throw new Error("Player not found")
+      }
     }
 
     return await lineupRepository.upsertLineup({
@@ -61,8 +68,8 @@ async function upsertDefaultLineup({
   }[]
 }) {
   try {
-    const user = await userGrpc.getUserById(userId)
-    console.log(user)
+    const user = await userGrpc.findUserById(userId)
+
     if (!user) {
       throw new Error("User not found")
     }
@@ -70,6 +77,13 @@ async function upsertDefaultLineup({
     const team = await teamGrpc.findTeamById(teamId)
     if (!team) {
       throw new Error("Team not found")
+    }
+
+    for (const player of players) {
+      const playerFound = await teamGrpc.findPlayerById(player.playerId)
+      if (!playerFound) {
+        throw new Error("Player not found")
+      }
     }
 
     return await lineupRepository.upsertDefaultLineup(
@@ -86,6 +100,17 @@ async function upsertDefaultLineup({
 
 async function findDefaultLineupByTeamAndUser(userId: string, teamId: number) {
   try {
+    const user = await userGrpc.findUserById(userId)
+
+    if (!user) {
+      throw new Error("User not found")
+    }
+
+    const team = await teamGrpc.findTeamById(teamId)
+    if (!team) {
+      throw new Error("Team not found")
+    }
+
     return await lineupRepository.findDefaultLineupByTeamAndUser(userId, teamId)
   } catch (error) {
     console.error(

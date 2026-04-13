@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package tournament;
+
+service TournamentService {
+  rpc FindGroupById (Params) returns (FindGroupByIdResponse) {}
+  rpc FindTournamentById (Params) returns (FindTournamentByIdResponse) {}
+  rpc FindStadiumById (Params) returns (FindStadiumByIdResponse) {}
+}
+
+message Params {
+  string id = 1;
+}
+
+message FindGroupByIdResponse {
+  string id = 1;
+  string name = 2;
+  string tournamentId = 3;
+} 
+
+message FindTournamentByIdResponse {
+  string id = 1;
+  string name = 2;
+  string year = 3;
+}
+
+message FindStadiumByIdResponse {
+  string id = 1;
+  string name = 2;
+  string city = 3;
+  string capacity = 4;
+}

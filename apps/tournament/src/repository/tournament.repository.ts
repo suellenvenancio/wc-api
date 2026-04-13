@@ -22,7 +22,7 @@ async function getAllTournaments() {
 async function findTournamentById(id: number) {
   return await prisma.tournament.findUnique({
     where: {
-      id,
+      id: Number(id),
     },
   })
 }

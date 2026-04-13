@@ -96,12 +96,24 @@ async function findDefaultLineupByTeamAndUser(userId: string, teamId: number) {
   })
 }
 
+async function findDefaultLineupById(id: number) {
+  return await prisma.userTeamLineup.findUnique({
+    where: {
+      id,
+    },
+    include: {
+      players: { include: { player: true } },
+    },
+  })
+}
+
 const lineupRepository = {
   upsertLineup,
   findLineup,
   findAllByMatch,
   upsertDefaultLineup,
   findDefaultLineupByTeamAndUser,
+  findDefaultLineupById,
 }
 
 export default lineupRepository

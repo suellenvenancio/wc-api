@@ -13,13 +13,13 @@ async function createPromptLog({
   sentPrompt,
   matchId,
   promptId,
-  userTacticId,
+  userLineupId,
 }: {
   response: string
   sentPrompt: string
   matchId?: number
   promptId: number
-  userTacticId?: number
+  userLineupId?: number
 }) {
   return await prisma.promptLog.create({
     data: {
@@ -27,7 +27,7 @@ async function createPromptLog({
       sentPrompt,
       matchId,
       promptId,
-      userTacticId,
+      userLineupId,
     },
   })
 }

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package match;
+
+service MatchService {
+  rpc FindMatchById (Params) returns (MatchResponse) {}
+  rpc FindDefaultLineupById (Params) returns (DefaultLineupResponse) {}
+}
+
+message Params {
+  string id = 1;
+}
+
+message MatchResponse {
+  string id = 1;
+  string homeTeamId = 2;
+  string awayTeamId = 3;
+  int32 homeScore = 4;
+  int32 awayScore = 5;
+  int32 tournamentId = 6;
+  string matchDate = 7;
+}
+
+message DefaultLineupResponse {
+  string id = 1;
+  string formation = 2;
+  string userId = 3;
+  string teamId = 4; 
+}

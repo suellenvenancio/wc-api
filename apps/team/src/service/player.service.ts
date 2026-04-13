@@ -1,4 +1,5 @@
 import playerRepository from "../repository/player.respository"
+import teamRepository from "../repository/team.repository"
 
 export async function createPlayer({
   name,
@@ -12,6 +13,10 @@ export async function createPlayer({
   overallRating: number
 }) {
   try {
+    const team = await teamRepository.findTeamById(teamId)
+    if (!team) {
+      throw new Error("Team not found")
+    }
     return await playerRepository.createPlayer({
       name,
       teamId,
@@ -44,6 +49,10 @@ async function findPlayerById(id: number) {
 
 async function findPlayerByTeamId(teamId: number) {
   try {
+    const team = await teamRepository.findTeamById(teamId)
+    if (!team) {
+      throw new Error("Team not found")
+    }
     return await playerRepository.findPlayerByTeamId(teamId)
   } catch (error) {
     console.error(`Error fetching players for team id ${teamId}:`, error)

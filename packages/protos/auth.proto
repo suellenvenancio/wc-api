@@ -3,14 +3,14 @@ syntax = "proto3";
 package auth;
 
 service AuthService {
-  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse) {}
+  rpc FindUserById (Params) returns (FindUserByIdResponse) {}
 }
 
-message GetUserByIdRequest {
+message Params {
   string id = 1;
 }
 
-message GetUserByIdResponse {
+message FindUserByIdResponse {
   string id = 1;
   string name = 2;
   string email = 3;

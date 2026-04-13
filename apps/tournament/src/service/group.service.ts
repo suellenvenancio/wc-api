@@ -1,14 +1,20 @@
 import groupRepository from "../repository/group.repository"
+import tournamentRepository from "../repository/tournament.repository"
 
 async function createGroup({
   name,
-  championshipId,
+  tournamentId,
 }: {
   name: string
-  championshipId: number
+  tournamentId: number
 }) {
   try {
-    return await groupRepository.createGroup({ name, championshipId })
+    const tournament =
+      await tournamentRepository.findTournamentById(tournamentId)
+    if (!tournament) {
+      throw new Error("Tournament not found")
+    }
+    return await groupRepository.createGroup({ name, tournamentId })
   } catch (error) {
     console.error("Error creating group:", error)
     throw new Error("Failed to create group")
@@ -33,12 +39,12 @@ async function findGroupById(id: number) {
   }
 }
 
-async function findGroupByChampionshipId(championshipId: number) {
+async function findGroupByTournamentId(tournamentId: number) {
   try {
-    return await groupRepository.findGroupByChampionshipId(championshipId)
+    return await groupRepository.findGroupByTournamentId(tournamentId)
   } catch (error) {
     console.error(
-      `Error fetching groups for championship id ${championshipId}:`,
+      `Error fetching groups for tournament id ${tournamentId}:`,
       error,
     )
     throw new Error("Failed to fetch groups")
@@ -49,7 +55,7 @@ const groupService = {
   createGroup,
   getAllGroups,
   findGroupById,
-  findGroupByChampionshipId,
+  findGroupByTournamentId,
 }
 
 export default groupService

@@ -35,11 +35,33 @@ async function findTeamsByGroupId(groupId: number) {
   })
 }
 
+async function findTeamsByTournamentId(tournamentId: number) {
+  return await prisma.team.findMany({
+    where: {
+      tournaments: {
+        some: {
+          id: tournamentId,
+        },
+      },
+    },
+  })
+}
+
+async function findTeamByName(name: string) {
+  return await prisma.team.findUnique({
+    where: {
+      name,
+    },
+  })
+}
+
 const teamRepository = {
   createTeam,
   getAllTeams,
   findTeamById,
   findTeamsByGroupId,
+  findTeamsByTournamentId,
+  findTeamByName,
 }
 
 export default teamRepository

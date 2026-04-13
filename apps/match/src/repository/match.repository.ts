@@ -55,7 +55,16 @@ async function findMatchById(id: number) {
 async function findMatchByTournamentId(tournamentId: number) {
   return await prisma.match.findMany({
     where: {
-      tournamentId,
+      tournamentId: Number(tournamentId),
+    },
+    include: {
+      homeTeam: true,
+      awayTeam: true,
+      stadium: true,
+      tournament: true,
+    },
+    orderBy: {
+      matchDate: "asc",
     },
   })
 }
@@ -84,6 +93,20 @@ async function findMatchByAwayTeamId(awayTeamId: number) {
   })
 }
 
+async function findMatchByGroupId(groupId: number) {
+  return await prisma.match.findMany({
+    where: {
+      tournament: {
+        groups: {
+          some: {
+            id: groupId,
+          },
+        },
+      },
+    },
+  })
+}
+
 const matchRepository = {
   createMatch,
   getAllMatches,
@@ -92,6 +115,7 @@ const matchRepository = {
   findMatchByStadiumId,
   findMatchByHomeTeamId,
   findMatchByAwayTeamId,
+  findMatchByGroupId,
 }
 
 export default matchRepository

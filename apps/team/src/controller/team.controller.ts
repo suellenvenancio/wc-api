@@ -44,13 +44,29 @@ export async function getTeamById(
   }
 }
 
-export async function getTeamsByGroupId(
+export async function findTeamsByGroupId(
   request: FastifyRequest<{ Params: { groupId: string } }>,
   reply: FastifyReply,
 ) {
   try {
     const { groupId } = request.params
     const teams = await teamService.findTeamsByGroupId(Number(groupId))
+    return reply.status(200).send(teams)
+  } catch (error) {
+    console.log(error)
+    return reply.status(500).send({ message: "Internal server error" })
+  }
+}
+
+export async function findTeamByTournamentId(
+  request: FastifyRequest<{ Params: { tournamentId: string } }>,
+  reply: FastifyReply,
+) {
+  try {
+    const { tournamentId } = request.params
+    const teams = await teamService.findTeamsByTournamentId(
+      Number(tournamentId),
+    )
     return reply.status(200).send(teams)
   } catch (error) {
     console.log(error)

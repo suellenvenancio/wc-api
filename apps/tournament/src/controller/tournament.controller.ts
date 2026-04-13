@@ -1,5 +1,5 @@
 import type { FastifyReply, FastifyRequest } from "fastify"
-import tournamentService from "../service/championship.service"
+import tournamentService from "../service/tournaments.service"
 
 export async function createTournament(
   request: FastifyRequest<{ Body: { name: string; year: number } }>,

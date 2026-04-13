@@ -1,4 +1,5 @@
 import coachRepository from "../repository/coach.repository"
+import teamRepository from "../repository/team.repository"
 
 async function createCoach({
   name,
@@ -10,6 +11,11 @@ async function createCoach({
   preferredFormation: string
 }) {
   try {
+    const team = await teamRepository.findTeamById(teamId)
+    if (!team) {
+      throw new Error("Team not found")
+    }
+
     return await coachRepository.createCoach({
       name,
       teamId,

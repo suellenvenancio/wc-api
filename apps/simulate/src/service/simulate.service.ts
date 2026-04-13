@@ -1,3 +1,4 @@
+import matchGrpc from "../grpc/grpc-client/match.grpc"
 import aiRepository from "../repository/ai.repository"
 import promptRepository from "../repository/prompt.repository"
 
@@ -11,6 +12,12 @@ async function simulateMatchPrompt(
   tacticAwayTeam: string,
   matchId: number,
 ) {
+  const match = await matchGrpc.findMatchById(matchId)
+
+  if (!match) {
+    throw new Error("Match não encontrado")
+  }
+
   const prompt = await promptRepository.findByName(promptName)
 
   if (!prompt) {
@@ -49,10 +56,10 @@ async function simulateDefaultTeamPrompt(
   tactic: string,
   teamName: string,
   teamPlayers: string[],
-  userTacticId: number,
+  userLineupId: number,
 ) {
   const prompt = await promptRepository.findByName(promptName)
-  console.log()
+
   if (!prompt) {
     throw new Error("Prompt não encontrado")
   }
@@ -72,15 +79,15 @@ async function simulateDefaultTeamPrompt(
       response: promptResponse.text(),
       sentPrompt: prompt.template,
       promptId: prompt.id,
-      userTacticId,
+      userLineupId,
     })
   }
   return promptResponse
 }
 
-const promptService = {
+const simulateService = {
   simulateMatchPrompt,
   simulateDefaultTeamPrompt,
 }
 
-export default promptService
+export default simulateService

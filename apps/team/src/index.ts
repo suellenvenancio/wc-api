@@ -12,7 +12,7 @@ dotenv.config()
 const app = fastify()
 
 app.register(cors, {
-  origin: ["http://localhost:3000"],
+  origin: ["http://192.168.1.26:3000", "http://192.168.1.26", "http://localhost:3000"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 })
@@ -42,7 +42,7 @@ app.decorate(
   },
 )
 
-app.register(teamRoutes, { prefix: "/teams" })
-app.register(playerRoutes, { prefix: "/players" })
+app.register(teamRoutes, { prefix: "/team" })
+app.register(playerRoutes, { prefix: "/player" })
 
 export default app

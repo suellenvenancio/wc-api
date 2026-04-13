@@ -53,3 +53,17 @@ export async function findPlayerById(
     return reply.status(500).send({ message: "Internal server error" })
   }
 }
+
+export async function findPlayerByTeamId(
+  request: FastifyRequest<{ Params: { teamId: number } }>,
+  reply: FastifyReply,
+) {
+  try {
+    const { teamId } = request.params
+    const player = await playerService.findPlayerByTeamId(teamId)
+    return reply.status(200).send(player)
+  } catch (error) {
+    console.log(error)
+    return reply.status(500).send({ message: "Internal server error" })
+  }
+}

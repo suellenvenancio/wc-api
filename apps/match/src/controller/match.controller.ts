@@ -7,7 +7,7 @@ export async function createMatch(
       matchDate: Date
       homeScore: number
       awayScore: number
-      championshipId: number
+      tournamentId: number
       stadiumId: number
       homeTeamId: number
       awayTeamId: number
@@ -20,7 +20,7 @@ export async function createMatch(
       matchDate,
       homeScore,
       awayScore,
-      championshipId,
+      tournamentId,
       stadiumId,
       homeTeamId,
       awayTeamId,
@@ -29,7 +29,7 @@ export async function createMatch(
       matchDate,
       homeScore,
       awayScore,
-      championshipId,
+      tournamentId,
       stadiumId,
       homeTeamId,
       awayTeamId,
@@ -68,13 +68,13 @@ export async function findMatchById(
   }
 }
 
-export async function findMatchByChampionshipId(
-  request: FastifyRequest<{ Params: { championshipId: number } }>,
+export async function findMatchByTournamentId(
+  request: FastifyRequest<{ Params: { tournamentId: number } }>,
   reply: FastifyReply,
 ) {
   try {
-    const { championshipId } = request.params
-    const match = await matchService.findMatchByChampionshipId(championshipId)
+    const { tournamentId } = request.params
+    const match = await matchService.findMatchByTournamentId(tournamentId)
     return reply.status(200).send(match)
   } catch (error) {
     console.log(error)
@@ -117,6 +117,20 @@ export async function findMatchByAwayTeamId(
   try {
     const { awayTeamId } = request.params
     const match = await matchService.findMatchByAwayTeamId(awayTeamId)
+    return reply.status(200).send(match)
+  } catch (error) {
+    console.log(error)
+    return reply.status(500).send({ message: "Internal server error" })
+  }
+}
+
+export async function findMatchByGroupId(
+  request: FastifyRequest<{ Params: { groupId: number } }>,
+  reply: FastifyReply,
+) {
+  try {
+    const { groupId } = request.params
+    const match = await matchService.findMatchByGroupId(groupId)
     return reply.status(200).send(match)
   } catch (error) {
     console.log(error)

@@ -2,15 +2,15 @@ import { prisma } from "@wc-app/database"
 
 async function createGroup({
   name,
-  championshipId,
+  tournamentId,
 }: {
   name: string
-  championshipId: number
+  tournamentId: number
 }) {
   return await prisma.group.create({
     data: {
       name,
-      championshipId,
+      tournamentId,
     },
   })
 }
@@ -33,13 +33,23 @@ async function findGroupById(id: number) {
     where: {
       id,
     },
+    include: {
+      teams: true,
+    },
   })
 }
 
-async function findGroupByChampionshipId(championshipId: number) {
+async function findGroupByTournamentId(tournamentId: number) {
   return await prisma.group.findMany({
     where: {
-      championshipId,
+      tournamentId: Number(tournamentId),
+    },
+    include: {
+      teams: {
+        include: {
+          players: true,
+        },
+      },
     },
   })
 }
@@ -48,7 +58,7 @@ const groupRepository = {
   createGroup,
   getAllGroups,
   findGroupById,
-  findGroupByChampionshipId,
+  findGroupByTournamentId,
 }
 
 export default groupRepository

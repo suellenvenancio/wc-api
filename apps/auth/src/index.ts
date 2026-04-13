@@ -12,7 +12,12 @@ dotenv.config()
 const app = fastify()
 
 app.register(cors, {
-  origin: ["http://localhost:3000"],
+  origin: [
+    "http://192.168.1.26:3000",
+    "http://192.168.1.26",
+    "http://localhost:3000",
+    "http://localhost:3330",
+  ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 })
@@ -43,6 +48,6 @@ app.decorate(
 )
 
 app.register(authRoutes, { prefix: "/auth" })
-app.register(userRoutes, { prefix: "/users" })
+app.register(userRoutes, { prefix: "/user" })
 
 export default app
