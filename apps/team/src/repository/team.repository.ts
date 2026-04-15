@@ -38,11 +38,12 @@ async function findTeamsByGroupId(groupId: number) {
 async function findTeamsByTournamentId(tournamentId: number) {
   return await prisma.team.findMany({
     where: {
-      tournaments: {
-        some: {
-          id: tournamentId,
-        },
+      group: {
+        tournamentId: tournamentId,
       },
+    },
+    include: {
+      players: true,
     },
   })
 }
